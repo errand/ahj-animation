@@ -24,23 +24,11 @@ export default class Toggler {
         evt.preventDefault();
         const button = evt.target;
         const collapsible = document.querySelector(`#${button.getAttribute('aria-controls')}`);
-        console.log(collapsible);
-        if (collapsible.classList.contains('show')) {
-          collapsible.classList.add('collapsing');
-          collapsible.classList.remove('collapse');
-          collapsible.classList.remove('show');
-          setTimeout(() => {
-            collapsible.classList.remove('collapsing');
-            collapsible.classList.add('collapse');
-          }, 350);
+        const collapsibleInner = collapsible.querySelector('.card');
+        if (collapsible.clientHeight) {
+          collapsible.style.height = 0;
         } else {
-          collapsible.classList.add('collapsing');
-          collapsible.classList.remove('collapse');
-          setTimeout(() => {
-            collapsible.classList.add('collapse');
-            collapsible.classList.add('show');
-            collapsible.classList.remove('collapsing');
-          }, 350);
+          collapsible.style.height = collapsibleInner.clientHeight + "px";
         }
       }
     });

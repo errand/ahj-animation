@@ -14,12 +14,13 @@ body {
 .btn {
   display: inline-block;
   font-weight: 400;
-  color: #212529;
-  background-color: #f8f9fa;
+  color: #e0e3ff;
+  background-color: #002957;
   text-align: center;
   vertical-align: middle;
   padding: .375rem .75rem;
   font-size: 1rem;
+  cursor: pointer;
   line-height: 1.5;
   border-radius: .25rem;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -27,18 +28,13 @@ body {
 }
 
 .collapse {
-  display: none;
-}
-
-.collapse.show{
-  display: block;
-}
-
-.collapsing {
-  position: relative;
+  -moz-transition: height .5s;
+  -ms-transition: height .5s;
+  -o-transition: height .5s;
+  -webkit-transition: height .5s;
+  transition: height .5s;
   height: 0;
   overflow: hidden;
-  transition: height .35s ease;
 }
 
 @keyframes fade {
