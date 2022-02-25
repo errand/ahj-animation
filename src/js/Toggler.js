@@ -28,7 +28,7 @@ export default class Toggler {
         if (collapsible.clientHeight) {
           collapsible.style.height = 0;
         } else {
-          collapsible.style.height = collapsibleInner.clientHeight + "px";
+          collapsible.style.height = `${collapsibleInner.clientHeight}px`;
         }
       }
     });
